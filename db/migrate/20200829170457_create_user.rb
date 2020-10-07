@@ -1,0 +1,13 @@
+class CreateUser < ActiveRecord::Migration[6.0]
+  def change
+    create_table :users do |t|
+      t.string :email
+      t.string :password_digest
+      t.string :first_name
+      t.string :last_name
+      t.integer :contact
+      t.boolean :is_admin, default: false
+      t.integer :petstore_id
+    end
+  end
+end
